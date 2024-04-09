@@ -5,7 +5,9 @@ interface SlideProps {
 }
 
 const Slide: FC<SlideProps> = ({ children }) => {
-  return <div className="flex flex-1 flex-col items-center">{children}</div>
+  return (
+    <div className="flex flex-1 flex-col items-center py-5">{children}</div>
+  )
 }
 
 export default Slide
