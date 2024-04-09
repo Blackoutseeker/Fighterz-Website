@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
+import { technologies } from '@/utils/constants'
 
 import Slide from '@/components/Slide'
 import TechCard from '@/components/TechCard'
-import { technologies } from '@/utils/constants'
+import Viewport from '@/components/Viewport'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,12 @@ export default function Home() {
               <TechCard key={tech} tech={{ name: tech }} />
             ))}
           </ul>
+        </Slide>
+        <Slide>
+          <h2 className="my-10 text-xl font-bold md:text-4xl">
+            Funcionamento da Viewport (FitViewport)
+          </h2>
+          <Viewport />
         </Slide>
       </main>
     </>
